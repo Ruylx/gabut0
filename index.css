@@ -19,3 +19,15 @@ body {
 button {
     padding: 14px;
 }
+
+ @media (max-width: 600px) {
+            button {
+                font-size: 14px; /* Menyesuaikan ukuran font untuk layar kecil */
+                padding: 8px 16px;
+            }
+
+            /* Teks yang lebih kecil di layar kecil */
+            p {
+                font-size: 14px;
+            }
+        }
