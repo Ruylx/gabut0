@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="index.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box-container">
+    <div class="box">
+    <br>
+    <p></p>
+    <button onclick="button()">Jangan di pencet</button>
+    <audio id="myAudio" src="music.mp3" autoplay></audio>
+    </div>
+    </div>
+<script>
+    let clickCount = 0;  // Mulai dengan 0, karena klik pertama adalah 1
+
+    function button() {
+        clickCount++;  // Increment klik
+
+        if (clickCount === 1) {
+            // Teks setelah klik pertama
+            document.querySelector("button").innerHTML = "Di bilang jangan ya jangan";
+        }
+
+        else if (clickCount === 2) {
+            // Play audio setelah klik kedua
+            let audio = document.getElementById("myAudio");
+            document.querySelector("button").style.display = "none"; // Button hilang setelah di klik
+            document.querySelector("p").innerHTML ="Gw bilang juga apa.";
+            audio.currentTime = 0;  // Mulai dari awal
+            audio.play();
+            
+        }
+    }
+</script>
+
+</body>
+</html>
